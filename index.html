@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Protected Video</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body oncontextmenu="return false;">
+    <!-- Title Section -->
+    <header>
+      <h1>Saree Tassels</h1>
+    </header>
+
+    <!-- Video Gallery Section -->
+    <div class="video-gallery">
+      <div class="video-card" onclick="openVideo('a_NjlSGIKIM')">
+        <img
+          src="https://img.youtube.com/vi/a_NjlSGIKIM/0.jpg"
+          alt="Video Thumbnail"
+        />
+        <div class="video-title">Video 1 Title</div>
+      </div>
+      <div class="video-card" onclick="openVideo('eEL-Y0lcJA0')">
+        <img
+          src="https://img.youtube.com/vi/eEL-Y0lcJA0/0.jpg"
+          alt="Video Thumbnail"
+        />
+        <div class="video-title">Video 2 Title</div>
+      </div>
+      <div class="video-card" onclick="openVideo('c_NjlSGIKIM')">
+        <img
+          src="https://img.youtube.com/vi/c_NjlSGIKIM/0.jpg"
+          alt="Video Thumbnail"
+        />
+        <div class="video-title">Video 3 Title</div>
+      </div>
+      <!-- Add more videos as needed -->
+    </div>
+
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal">
+      <div class="modal-content">
+        <h2>Please enter password</h2>
+        <input type="password" id="password" placeholder="Enter Password" />
+        <button onclick="checkPassword()">Submit</button>
+      </div>
+    </div>
+
+    <!-- Video Section (hidden initially) -->
+    <div id="videoContainer" class="hidden">
+      <div class="video-wrapper">
+        <!-- Embed YouTube video -->
+        <iframe
+          width="560"
+          height="315"
+          id="videoPlayer"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+
+        <!-- Overlay Image to Hide "Share" Button -->
+        <div class="overlay"></div>
+
+        <!-- Overlay Button -->
+        <button
+          id="overlayButton"
+          class="overlay-button"
+          onclick="overlayButtonAction()"
+        ></button>
+        <button
+          id="overlayButton"
+          class="overlay-button2"
+          onclick="overlayButtonAction()"
+        ></button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
